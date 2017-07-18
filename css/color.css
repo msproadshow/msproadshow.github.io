@@ -1,0 +1,75 @@
+.main_navigation li a,.sap_title,.slider h1.site_title,.slider h3,.styled > div,.shortcuts li a:hover,.main_navigation li.current > a, .single_price h4.standard,
+.registration,.registration a,.newsleter h3,.newsleter .form-control,.newsleter .input-group-btn .btn,.single_speaker h5,.per_action h3,.spek_action h3,
+.single_events a:hover,.single_events a:hover .fa,.single_events a:hover p, .ev-ov-id,.ev-ov-id .speaker_soc li a,.ev-ov-dec,.pricing .item .icon,li.current a:hover,.btn-sq:hover,
+.single_price h4,.sp_bottom a,.be_partners h3,.contact_action h3,.btn-su,.copyright p,a:focus,a:active,a, .main_navigation li a p, .sap_title h1, .ev-ov-dec p {
+	color:#fff;
+}
+.form-control ::placeholder{
+	color:#fff;
+}
+.registration a:hover,.single_speaker ul,.single_events:nth-child(even),.ev-ov-id .speaker_soc li a:hover,.sp_top,.sp_bottom_pr,.single_partner,
+.contact_form input[type="text"],.contact_form textarea,.btn-su:hover,.icon-bar{
+	background:#fff;
+}
+
+.main_navigation li.current,.shortcuts li a:hover,.main_navigation li.current > a, .single_price h4.standard,.registration,.registration a,.sp_bottom a,.btn-sq:hover,
+.btn-su{
+	background:#F0652F;
+}
+.sidebar_content .fa, .btn-su:hover,.registration a:hover,.sidebar_content .fa,.main_navigation li a:hover,.sp_bottom h1{
+	color:#f0652f;
+}
+
+.single_speaker ul li a,.speaker_soc li a,.single_events a,.sp_top,.contact_form input[type="text"],.contact_form textarea{
+	color:#464646;
+}
+.ev-ov-dec{
+	background:#464646;
+}
+
+.single_events .fa,.ev-ov-id .speaker_soc li a:hover{
+	color:#689aca;
+}
+
+.single_events a:hover,.ev-ov-bg,.single_price h4,.copyright{
+	background:#689aca;
+}
+
+.right_sidebar{
+	background:#f9f9f9;
+}
+.middle,.single_events:nth-child(odd){
+	background:#f7f7f7;
+}
+.divder,.divder-sm{
+	background:#f1f1f1;
+}
+
+
+
+.btn-su{
+    border:2px solid #F0652F;
+}
+.styled > div ,.shortcuts li a,.registration a,.newsleter .form-control,.newsleter .input-group-btn .btn,.single_price h4,.btn-sq{
+  border-color:#fff;
+}
+.single_partner{
+  border-color:#f1f1f1;
+}
+
+.pricing .item .icon {
+    background: #ddd;
+}
+.overlay{
+/*	background:rgba(0,0,0,.7);*/
+    background-color: rgba(53, 59, 73, 0.8);
+}
+.navigation_me{
+	background:rgba(104,154,202,.85);
+}
+.single_speaker:hover a{
+    background: rgba(240, 101, 47, 0.5);
+}
+.single_speaker h5{
+    background: rgba(104, 154, 202, 0.9);
+}
