@@ -31,7 +31,7 @@
 	color:#689aca;
 }
 
-.single_events a:hover,.ev-ov-bg,.single_price h4,.copyright{
+.single_events a:hover,.ev-ov-bg,.single_price h4{
 	background:#689aca;
 }
 
@@ -45,7 +45,9 @@
 	background:#f1f1f1;
 }
 
-
+.btn-sq{
+	background-color: rgb(32,165,108);
+}
 
 .btn-su{
     border:2px solid #F0652F;
@@ -62,7 +64,7 @@
 }
 .overlay{
 /*	background:rgba(0,0,0,.7);*/
-    background-color: rgba(53, 59, 73, 0.8);
+   /* background-color: rgba(53, 59, 73, 0.8);*/
 }
 .navigation_me{
 	background:rgba(104,154,202,.85);

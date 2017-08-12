@@ -1,102 +1,107 @@
 jQuery(function () {
-	"use strict";	
- 
-    /*global jQuery, $, google, slides */ 
-    
-    
+	"use strict";
+
+    /*global jQuery, $, google, slides */
+
+
             // site preloader -- also uncomment the div in the header and the css style for #preloader
-            $(window).load(function(){
-                $('#preloader').fadeOut('slow',function(){$(this).remove();});
-            });    
-    
-            jQuery(document).ready(function($) {  
-                
-                
-				jQuery('.navbar-collapse').click('li', function() {
-					jQuery('.navbar-collapse').collapse('hide');
-				});
-                
-                
-                $('.left_bar').onePageNav();
-                
-				
-				$('a.btn-reg').click(function() {
-					$('html, body').animate({ scrollTop:$('#pricing_table').offset().top - 0 }, 2000);
-					return false;
-				});
-                
-				$('a.btn-loc').click(function() {
-					$('html, body').animate({ scrollTop:$('#location').offset().top - 0 }, 2000);
-					return false;
-				});
-				
-				$('a.btn-spek').click(function() {
-					$('html, body').animate({ scrollTop:$('#speakers').offset().top - 0 }, 2000);
-					return false;
-				});
-				
-				// We only want these styles applied when javascript is enabled
-				$('div.navigation').css({ 'float' : 'left'});
-				$('div.content').css('display', 'block');
+				var preloader = document.getElementById('preloader');
+				window.onload = function() {
+					setTimeout(removePreloader , 500);
+				};
 
-				// Initially set opacity on thumbs and add
-				// additional styling for hover effect on thumbs
-				var onMouseOutOpacity = 0.67;
-				$('#thumbs ul.thumbs li').opacityrollover({
-					mouseOutOpacity:   onMouseOutOpacity,
-					mouseOverOpacity:  1.0,
-					fadeSpeed:         'fast',
-					exemptionSelector: '.selected'
-				});
-				
-				// Initialize Advanced Galleriffic Gallery
-				 $('#thumbs').galleriffic({
-					delay:                     2500,
-					numThumbs:                 9,
-					preloadAhead:              10,
-					enableTopPager:            true,
-					enableBottomPager:         true,
-					maxPagesToShow:            7,
-					imageContainerSel:         '#slideshow',
-					controlsContainerSel:      '#controls',
-					captionContainerSel:       '#caption',
-					loadingContainerSel:       '#loading',
-					renderSSControls:          true,
-					renderNavControls:         true,
-					playLinkText:              'Play Slideshow',
-					pauseLinkText:             'Pause Slideshow',
-					prevLinkText:              '&lsaquo; Previous Photo',
-					nextLinkText:              'Next Photo &rsaquo;',
-					nextPageLinkText:          'Next &rsaquo;',
-					prevPageLinkText:          '&lsaquo; Prev',
-					enableHistory:             false,
-					autoStart:                 false,
-					syncTransitions:           true,
-					defaultTransitionDuration: 3000,
-					onSlideChange:             function(prevIndex, nextIndex) {
-						// 'this' refers to the gallery, which is an extension of $('#thumbs')
-						this.find('ul.thumbs').children()
-							.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
-							.eq(nextIndex).fadeTo('fast', 1.0);
-					},
-					onPageTransitionOut:       function(callback) {
-						this.fadeTo('fast', 0.0, callback);
-					},
-					onPageTransitionIn:        function() {
-						this.fadeTo('fast', 1.0);
-					}
-				});
-                
-				$('#pricing_table').parallax("50%", 0.1);
-				$('#be_partners').parallax("50%", 0.1);
-				$('#newsleter').parallax("50%", 0.1);
-				$('#per_action').parallax("50%", 0.1);
-				$('#spek_action').parallax("50%", 0.1);
-				$('#contact_action').parallax("50%", 0.1);                
-                
+				function removePreloader() {
+					document.body.removeChild(preloader);
+				};
 
-			});    
-    
+              jQuery(document).ready(function($) {
+
+
+        jQuery('.navbar-collapse').click('li', function() {
+            jQuery('.navbar-collapse').collapse('hide');
+        });
+
+
+       $('.left_bar').onePageNav();
+
+
+        $('a.btn-reg').click(function() {
+            $('html, body').animate({ scrollTop:$('#pricing_table').offset().top - 0 }, 1000);
+            return false;
+        });
+
+        $('a.btn-loc').click(function() {
+            $('html, body').animate({ scrollTop:$('#location').offset().top - 0 }, 1000);
+            return false;
+        });
+
+        $('a.btn-spek').click(function() {
+            $('html, body').animate({ scrollTop:$('#speakers').offset().top - 0 }, 1000);
+            return false;
+        });
+
+        // We only want these styles applied when javascript is enabled
+        $('div.navigation').css({ 'float' : 'left'});
+        $('div.content').css('display', 'block');
+
+        // Initially set opacity on thumbs and add
+        // additional styling for hover effect on thumbs
+        var onMouseOutOpacity = 0.67;
+        $('#thumbs ul.thumbs li').opacityrollover({
+            mouseOutOpacity:   onMouseOutOpacity,
+            mouseOverOpacity:  1.0,
+            fadeSpeed:         'fast',
+            exemptionSelector: '.selected'
+        });
+
+        // Initialize Advanced Galleriffic Gallery
+        $('#thumbs').galleriffic({
+            delay:                     2500,
+            numThumbs:                 9,
+            preloadAhead:              10,
+            enableTopPager:            true,
+            enableBottomPager:         true,
+            maxPagesToShow:            7,
+            imageContainerSel:         '#slideshow',
+            controlsContainerSel:      '#controls',
+            captionContainerSel:       '#caption',
+            loadingContainerSel:       '#loading',
+            renderSSControls:          true,
+            renderNavControls:         true,
+            playLinkText:              'Play Slideshow',
+            pauseLinkText:             'Pause Slideshow',
+            prevLinkText:              '&lsaquo; Previous Photo',
+            nextLinkText:              'Next Photo &rsaquo;',
+            nextPageLinkText:          'Next &rsaquo;',
+            prevPageLinkText:          '&lsaquo; Prev',
+            enableHistory:             false,
+            autoStart:                 false,
+            syncTransitions:           true,
+            defaultTransitionDuration: 3000,
+            onSlideChange:             function(prevIndex, nextIndex) {
+                // 'this' refers to the gallery, which is an extension of $('#thumbs')
+                this.find('ul.thumbs').children()
+                    .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+                    .eq(nextIndex).fadeTo('fast', 1.0);
+            },
+            onPageTransitionOut:       function(callback) {
+                this.fadeTo('fast', 0.0, callback);
+            },
+            onPageTransitionIn:        function() {
+                this.fadeTo('fast', 1.0);
+            }
+        });
+
+        $('#pricing_table').parallax("50%", 0.1);
+        $('#be_partners').parallax("50%", 0.1);
+        $('#newsleter').parallax("50%", 0.1);
+        $('#per_action').parallax("50%", 0.1);
+        $('#spek_action').parallax("50%", 0.1);
+        $('#contact_action').parallax("50%", 0.1);
+
+
+    });
+
             var myOptions = {
 				zoom: 16,
 				scrollwheel: false,
@@ -196,9 +201,9 @@ jQuery(function () {
 						]
 			};
 
-			var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);	
-				
-			
+			var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+
+
 			$(function() {
 				var endDate = "September 10, 2017 15:03:25";
 
@@ -209,7 +214,7 @@ jQuery(function () {
 				  }
 				});
 			  });
-			
+
 
 			$('#slides').superslides({
 			  animation: 'fade',
@@ -218,5 +223,5 @@ jQuery(function () {
 			  pagination: false,
 			});
 
-    
-}());        
+
+}());
