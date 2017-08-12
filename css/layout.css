@@ -91,8 +91,14 @@ Point : One Page Event and Conference HTML Template
 	height: 100%;
 }
 
+.row .ev-ov-bg{
+	margin-top: 17%;
+	position: relative;
+}
 
-
+#txt{
+	color: #20a56c;
+}
 /*------------------------------------------------------------------ 
 
 2. Left Bar */
@@ -925,6 +931,7 @@ footer{
     .navigation_me{
         height: auto;
     }
+
   
 }
 

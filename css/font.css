@@ -18,12 +18,15 @@ h1{
 	font-size:48px;
 	font-weight:600;
 	text-transform:uppercase;   
-    color: #2e2e35;
+    color: #20a56c;
 }
 h2{
 	font-size:36px;
 	font-weight:400;
+	color:white;
 }
+
+
 h3{
 	font-size:24px;
 	font-weight:400;
