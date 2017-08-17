@@ -1,0 +1,153 @@
+body{
+    height: 97vh;
+    width: 99vw;
+    position: absolute;
+}
+
+
+.shedule{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+   /* border: 1px solid rgba(122,122,123,0.94);
+    border-bottom: none;*/
+    margin: auto;
+}
+
+.sheduleHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: "helvetica neue", helvetica, sans-serif;
+    color: #f0652f;
+    font-weight: 600;
+    font-size: 1em;
+    height: 6.67%;
+    border-bottom: 1px solid rgba(122,122,123,0.94);
+
+}
+
+.sheduleTime{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis:50px;
+    margin-right: 3%;
+}
+
+.mainTime{
+    text-align: center;
+    margin: auto;
+}
+
+.fromToContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: auto;
+}
+
+.fromTo{
+    flex-grow: 1;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.sheduleEvent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 6;
+    flex-basis:300px;
+}
+
+.stream{
+    text-align: center;
+    flex-grow: 1;
+    margin: auto;
+}
+
+.sheduleBody{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow:6;
+    flex-basis: 600px;
+    height: 86.66%;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.sheduleRowItem:nth-child(odd){
+    background-color: rgba(127,169,210,0.2);
+}
+
+.sheduleRowItem:nth-child(even){
+    background-color: rgba(32,165,108, 0.2);
+
+}
+
+.sheduleRowItem{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-grow: 5;
+    border-bottom: 1px solid rgba(122,122,123,0.94);
+}
+
+.time{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50px;
+    margin-right: 3%;
+}
+
+.sections{
+    flex-grow: 6;
+    flex-basis: 300px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.sectionA, .sectionB, .sectionC {
+    width: 33%;
+    margin: auto;
+    margin-right: 5%;
+
+}
+.time .from{
+    flex-grow: 1;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.time .to{
+    flex-grow:1;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.topic{
+    margin: auto;
+    font-size: inherit;
+}
+
+#toregistration{
+    margin: auto;
+    border: 1px solid white;
+    height: 6.67%;
+    background-color: #F0652F;
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+#toregistration h3{
+    color: white;
+    margin: auto;
+}
+
