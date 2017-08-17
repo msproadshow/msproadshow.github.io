@@ -932,7 +932,31 @@ footer{
         height: auto;
     }
 
-  
+
+
+
 }
+
+#registration{
+    height: 100px;
+}
+
+#regbutton{
+    margin-left: 36%;
+}
+
+
+#shedule{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#buttons{
+    background-image: url(../images/ice.jpg);
+    background-size: auto;
+}
+
+
 
 
