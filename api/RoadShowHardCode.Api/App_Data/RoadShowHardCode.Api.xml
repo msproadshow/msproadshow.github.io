@@ -1,0 +1,2481 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RoadShowHardCode.Api</name>
+    </assembly>
+    <members>
+        <member name="T:RoadShowHardCode.Api.ApiError">
+            <summary>
+            Custom Error
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.ApiError.Request">
+            <summary>
+            The request.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.ApiError.#ctor(System.Net.HttpStatusCode,RoadShowHardCode.BusinessLayer.IError,System.Web.Http.ApiController)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.ApiError"/> class.
+            Constructor
+            </summary>
+            <param name="statusCode">
+            The status Code.
+            </param>
+            <param name="error">
+            The error.
+            </param>
+            <param name="controller">
+            The controller.
+            </param>
+        </member>
+        <member name="P:RoadShowHardCode.Api.ApiError.ErrorCode">
+            <summary>
+            Gets the error code.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.ApiError.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.ApiError.StatusCode">
+            <summary>
+            Gets the status code.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.ApiError.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            The execute async.
+            </summary>
+            <param name="cancellationToken">
+            The cancellation token.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.ApiError.Execute(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Execute synchronously
+            </summary>
+            <param name="context">
+            The context
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.ApiError.Execute(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            Execute synchronously
+            </summary>
+            <param name="context">
+            The context
+            </param>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Startup">
+            <summary>
+            The startup.
+            </summary>
+            <summary>
+            The startup.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Startup.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:RoadShowHardCode.Api.Startup" /> class.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Startup.OAuthBearerOptions">
+            <summary>
+            Gets the o authorization bearer options.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Startup.ConfigureAuth(Owin.IAppBuilder)">
+            <summary>
+            The configure authorization.
+            </summary>
+            <param name="app">
+            The application.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            The configuration.
+            </summary>
+            <param name="app">
+            The app.
+            </param>
+        </member>
+        <member name="T:RoadShowHardCode.Api.StartupConfig">
+            <summary>
+            startup config
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.StartupConfig.config">
+            <summary>
+            The config.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.StartupConfig.Config">
+            <summary>
+            Gets the config.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.NinjectDependencyResolver">
+            <summary>
+            The ninject dependency resolver.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.NinjectDependencyResolver.kernel">
+            <summary>
+            The kernel.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectDependencyResolver.#ctor(Ninject.IKernel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.NinjectDependencyResolver"/> class.
+            </summary>
+            <param name="kernel">
+            The kernel.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectDependencyResolver.BeginScope">
+            <summary>
+            The begin scope.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Http.Dependencies.IDependencyScope" />.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.NinjectDependencyScope">
+            <summary>
+            The ninject dependency scope.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.NinjectDependencyScope.resolver">
+            <summary>
+            The resolver.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectDependencyScope.#ctor(Ninject.Syntax.IResolutionRoot)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.NinjectDependencyScope"/> class.
+            </summary>
+            <param name="resolver">
+            The resolver.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectDependencyScope.Dispose">
+            <summary>
+            The dispose.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectDependencyScope.GetService(System.Type)">
+            <summary>
+            The get service.
+            </summary>
+            <param name="serviceType">
+            The service type.
+            </param>
+            <returns>
+            The <see cref="T:System.Object"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">
+            Unknown type
+            </exception>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectDependencyScope.GetServices(System.Type)">
+            <summary>
+            The get services.
+            </summary>
+            <param name="serviceType">
+            The service type.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">
+            Unknown type
+            </exception>
+        </member>
+        <member name="T:RoadShowHardCode.Api.NinjectWebCommon">
+            <summary>
+            The ninject web common.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.NinjectWebCommon.Bootstrapper">
+            <summary>
+            The bootstrapper.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectWebCommon.Start">
+            <summary>
+            Starts the application
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectWebCommon.Stop">
+            <summary>
+            Stops the application.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectWebCommon.CreateKernel">
+            <summary>
+            Creates the kernel that will manage your application.
+            </summary>
+            <returns>The created kernel.</returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.NinjectWebCommon.RegisterServices(Ninject.IKernel)">
+            <summary>
+            Load your modules or register your services here!
+            </summary>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="T:RoadShowHardCode.Api.RouteConfig">
+            <summary>
+            The route config.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            The register routes.
+            </summary>
+            <param name="routes">
+            The routes.
+            </param>
+        </member>
+        <member name="T:RoadShowHardCode.Api.SwaggerConfig">
+            <summary>
+            The swagger config.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.SwaggerConfig.Register">
+            <summary>
+            The register.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.WebApiConfig">
+            <summary>
+            The web api config.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Web API configuration and services.
+            </summary>
+            <param name="config">
+            The config.
+            </param>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Controllers.AccountController">
+            <summary>
+            Account handling
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.AccountController.#ctor(Common.Logging.ILog,RoadShowHardCode.Api.Identity.IIdentityService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Controllers.AccountController"/> class.
+            </summary>
+            <param name="logger">
+            The logger.
+            </param>
+            <param name="service">
+            The service.
+            </param>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Controllers.AccountController.IdentityService">
+            <summary>
+            Gets the identity service.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.AccountController.ForgotPassword(System.String,System.String)">
+            <summary>
+            The forgot password.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <param name="language">
+            The language.
+            </param>
+            <returns>
+            The <see cref="T:System.Web.Http.IHttpActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.AccountController.GetUserInfo">
+            <summary>
+            The get user information.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Http.IHttpActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.AccountController.PostAuthorize(RoadShowHardCode.Api.Models.LoginDto)">
+            <summary>
+            The post authorize.
+            </summary>
+            <param name="dto">
+            The data transfer object.
+            </param>
+            <returns>
+            The <see cref="T:System.Web.Http.IHttpActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.AccountController.PostChangePassword(System.String,System.String,System.String)">
+            <summary>
+            The post change password.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <param name="token">
+            The token.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.AccountController.Register(RoadShowHardCode.Api.Models.RegisterDto)">
+            <summary>
+            The register.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <returns>
+            The <see cref="T:System.Web.Http.IHttpActionResult"/>.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Controllers.BaseController">
+            <summary>
+            The base controller.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Controllers.BaseController.errors">
+            <summary>
+            The errors.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Controllers.BaseController"/> class.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.#ctor(Common.Logging.ILog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Controllers.BaseController"/> class.
+            </summary>
+            <param name="logger">
+            The logger.
+            </param>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Controllers.BaseController.Logger">
+            <summary>
+            Gets the logger.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.Error``1">
+            <summary>
+            The error.
+            </summary>
+            <typeparam name="T">
+            Any error
+            </typeparam>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.ApiError"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.Error(RoadShowHardCode.BusinessLayer.IError)">
+            <summary>
+            The error.
+            </summary>
+            <param name="error">
+            The error object.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.ApiError"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.Error(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            The error.
+            </summary>
+            <param name="errorList">
+            The error list.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.ApiError"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.GetModelError">
+            <summary>
+            Check model state and put converted error
+            </summary>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.ApiError" />.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.NotFound(RoadShowHardCode.BusinessLayer.IError)">
+            <summary>
+            The not found.
+            </summary>
+            <param name="error">
+            The error.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.ApiError"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.BaseController.Using``1">
+            <summary>
+            The using.
+            </summary>
+            <typeparam name="T">
+            Any reference type
+            </typeparam>
+            <returns>
+            The <see cref="M:RoadShowHardCode.Api.Controllers.BaseController.Using``1" />.
+            </returns>
+            <exception cref="T:System.NullReferenceException">
+            Type can not be resolved
+            </exception>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Controllers.HomeController">
+            <summary>
+            The home controller.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Controllers.HomeController.Index">
+            <summary>
+            The index.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult" />.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Filters.UnhandledExceptionFilter">
+            <summary>
+            The unhandled exception filter.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Filters.UnhandledExceptionFilter.logger">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Filters.UnhandledExceptionFilter.#ctor(Common.Logging.ILog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Filters.UnhandledExceptionFilter"/> class.
+            </summary>
+            <param name="logger">
+            The logger.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Filters.UnhandledExceptionFilter.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            The on exception.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Filters.UnhandledExceptionFilter.CreateHttpError(System.Web.Http.Filters.HttpActionExecutedContext,System.Exception)">
+            <summary>
+            The get http status code.
+            </summary>
+            <param name="context">
+            The context
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Filters.UnhandledExceptionFilter.LogException(System.Exception)">
+            <summary>
+            The log exception.
+            </summary>
+            <param name="exception">
+            The exception.
+            </param>
+        </member>
+        <member name="T:RoadShowHardCode.Api.WebApiApplication">
+            <summary>
+            The web api application.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.WebApiApplication.Application_Start">
+            <summary>
+            The application_ start.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Handler.AllowOptionsHandler">
+            <summary>
+            The allow options handler.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.AllowOptionsHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            The send async.
+            </summary>
+            <param name="request">
+            The request.
+            </param>
+            <param name="cancellationToken">
+            The cancellation token.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Handler.FileResult">
+            <summary>
+            The file result.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Handler.FileResult.filePath">
+            <summary>
+            The file path.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Handler.FileResult.contentType">
+            <summary>
+            The content type.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.FileResult.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Handler.FileResult"/> class.
+            </summary>
+            <param name="filePath">
+            The file path.
+            </param>
+            <param name="contentType">
+            The content type.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Null value in <see cref="F:RoadShowHardCode.Api.Handler.FileResult.filePath"/>
+            </exception>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.FileResult.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            The execute async.
+            </summary>
+            <param name="cancellationToken">
+            The cancellation token.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.FileResult.MapPath(System.String)">
+            <summary>
+            The map path.
+            </summary>
+            <param name="path">
+            The path.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Handler.MessageHandler">
+            <summary>
+            The message handler.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Handler.MessageHandler.HttpContext">
+            <summary>
+            The http context.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Handler.MessageHandler.RemoteEndpointMessage">
+            <summary>
+            The remote endpoint message.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Handler.MessageHandler.OwinContext">
+            <summary>
+            The owin context.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.MessageHandler.IncomingMessageAsync(System.String,System.String,System.Byte[])">
+            <summary>
+            The incoming message async.
+            </summary>
+            <param name="correlationId">
+            The correlation id.
+            </param>
+            <param name="requestInfo">
+            The request info.
+            </param>
+            <param name="message">
+            The message.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.MessageHandler.OutgoingMessageAsync(System.String,System.String,System.Byte[])">
+            <summary>
+            The outgoing message async.
+            </summary>
+            <param name="correlationId">
+            The correlation id.
+            </param>
+            <param name="requestInfo">
+            The request info.
+            </param>
+            <param name="message">
+            The message.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.MessageHandler.MessageAsync(Arvi.Omt.Api.Handler.ApiLogEntity,System.String)">
+            <summary>
+            The full message async.
+            </summary>
+            <param name="apiLogEntity">
+            The ApiLogEntity info.
+            </param>
+            <param name="requestInfo">
+            The request info.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.MessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            The send async.
+            </summary>
+            <param name="request">
+            The request.
+            </param>
+            <param name="cancellationToken">
+            The cancellation token.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.MessageHandler.CreateApiLogEntryWithRequestData(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            The create api log entry with request data.
+            </summary>
+            <param name="request">
+            The request.
+            </param>
+            <returns>
+            The <see cref="T:Arvi.Omt.Api.Handler.ApiLogEntity"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.MessageHandler.SerializeRouteData(System.Web.Http.Routing.IHttpRouteData)">
+            <summary>
+            The serialize route data.
+            </summary>
+            <param name="routeData">
+            The route data.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Handler.MessageHandler.SerializeHeaders(System.Net.Http.Headers.HttpHeaders)">
+            <summary>
+            The serialize headers.
+            </summary>
+            <param name="headers">
+            The headers.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.AspNetIdentityService">
+            <summary>
+            The asp net identity service.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Identity.AspNetIdentityService.storage">
+            <summary>
+            The storage.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.AspNetIdentityService"/> class.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.#ctor(RoadShowHardCode.Api.Identity.IIdentityStorage)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.AspNetIdentityService"/> class.
+            </summary>
+            <param name="storage">
+            The storage.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.ChangePasswordAsync(RoadShowHardCode.Models.User,System.String)">
+            <summary>
+            The change password.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.ChangePassword(System.String,System.String)">
+            <summary>
+            The change password.
+            </summary>
+            <param name="userLogin">
+            The user login.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.OAuthAuthorize(RoadShowHardCode.Api.Identity.LoginInfo)">
+            <summary>
+            The authorize.
+            </summary>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.ReIssueCredentials(RoadShowHardCode.Api.Identity.LoginInfo)">
+            <summary>
+            The re issue credentials.
+            </summary>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.Register(RoadShowHardCode.Models.User,System.String,System.String[])">
+            <summary>
+            The register.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GetUserProfile(System.String)">
+            <summary>
+            The get user profile.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GetUserProfile(Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The get user profile.
+            </summary>
+            <param name="userLoginInfo">
+            The user login info.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GetUserProfile(System.String,System.String)">
+            <summary>
+            The get user profile.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.RemoveLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The remove login.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="loginInfo">
+            The login info.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.CreateIdentity(RoadShowHardCode.Models.User,System.String)">
+            <summary>
+            The create identity.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="applicationCookie">
+            The application cookie.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.AddLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The add login.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.ChangePasswordAsync(System.String,System.String,System.String)">
+            <summary>
+            The change password async.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="oldPassword">
+            The old password.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.AddPasswordAsync(System.String,System.String)">
+            <summary>
+            The add password async.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GetLogins(System.String)">
+            <summary>
+            The get logins.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.UpdateUser(RoadShowHardCode.Models.User)">
+            <summary>
+            The update user.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.UpdateReLoginRequired(RoadShowHardCode.Models.User)">
+            <summary>
+            The update re login required.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.AddUserToRoles(System.String,System.String[])">
+            <summary>
+            The add user to roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.RemoveUserFromRoles(System.String,System.String[])">
+            <summary>
+            The remove user from roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.RemoveProfile(System.String)">
+            <summary>
+            The remove profile.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GetRoles">
+            <summary>
+            The get roles.
+            </summary>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GetUsers">
+            <summary>
+            The get users.
+            </summary>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GeneratePassword">
+            <summary>
+            The generate password.
+            </summary>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.UpdatePassword(System.String,System.String)">
+            <summary>
+            The update password.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GenerateForgotPasswordToken(System.String)">
+            <summary>
+            The generate forgot password token.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.IsInRoleAsync(System.String,System.String)">
+            <summary>
+            The is in role async.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="role">
+            The role.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityService.GetUserRoles(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.AspNetIdentityStorage">
+            <summary>
+            The asp net identity storage.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.roleManager">
+            <summary>
+            The role manager.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.userManager">
+            <summary>
+            The user manager.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:RoadShowHardCode.Api.Identity.AspNetIdentityStorage"/> class.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.AspNetIdentityStorage"/> class.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.UserManager">
+            <summary>
+            Gets the user manager.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.RoleManagerFactory">
+            <summary>
+            Gets the role manager factory.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.UserManagerFactory">
+            <summary>
+            Gets the user manager factory.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetUser(System.String)">
+            <summary>
+            The get user.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetUser(System.String,System.String)">
+            <summary>
+            The get user.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.CreateIdentity(RoadShowHardCode.Models.User,System.String)">
+            <summary>
+            The create identity.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="type">
+            The type.
+            </param>
+            <returns>
+            The <see cref="T:System.Security.Claims.ClaimsIdentity"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.CreateUser(RoadShowHardCode.Models.User,System.String,System.String[])">
+            <summary>
+            The create user.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.AddUserToRoles(System.String,System.String[])">
+            <summary>
+            The add user to roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.RemoveUserFromRoles(System.String,System.String[])">
+            <summary>
+            The remove user from roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.Update(RoadShowHardCode.Models.User)">
+            <summary>
+            The update.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.UpdateReLoginRequired(RoadShowHardCode.Models.User)">
+            <summary>
+            The update re login required.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetUserById(System.String)">
+            <summary>
+            The get user by id.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetUser(Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The get user.
+            </summary>
+            <param name="userLoginInfo">
+            The user login info.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.RemoveLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The remove login.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="loginInfo">
+            The login info.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.AddLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The add login.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.AddPasswordAsync(System.String,System.String)">
+            <summary>
+            The add password async.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetLogins(System.String)">
+            <summary>
+            The get logins.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.ChangePasswordAsync(System.String,System.String,System.String)">
+            <summary>
+            The change password async.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="oldPassword">
+            The old password.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GeneratePassword">
+            <summary>
+            The generate password.
+            </summary>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.IsInRoleAsync(System.String,System.String)">
+            <summary>
+            The is in role async.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="role">
+            The role.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetRoles">
+            <summary>
+            The get roles.
+            </summary>
+            <returns>
+            The <see cref="T:System.Collections.Generic.Dictionary`2"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetUsers">
+            <summary>
+            The get users.
+            </summary>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IEnumerable`1"/> with <see cref="T:RoadShowHardCode.Models.User"/> as <c>T</c> parameter.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.AspNetIdentityStorage.GetUserRoles(System.String)">
+            <summary>
+            The get user roles.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IList`1"/> with <see cref="T:System.String"/> as <c>T</c> parameter.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.ForgetResponse">
+            <summary>
+            The forget response.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.ForgetResponse.Result">
+            <summary>
+            Gets or sets a value indicating whether result.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.ForgetResponse.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.ForgetResponse.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.IIdentityService">
+            <summary>
+            The IdentityService interface.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.ChangePasswordAsync(RoadShowHardCode.Models.User,System.String)">
+            <summary>
+            The change password.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GenerateForgotPasswordToken(System.String)">
+            <summary>
+            The generate forgot password token.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.OAuthAuthorize(RoadShowHardCode.Api.Identity.LoginInfo)">
+            <summary>
+            The authorize.
+            </summary>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.ReIssueCredentials(RoadShowHardCode.Api.Identity.LoginInfo)">
+            <summary>
+            The re issue credentials.
+            </summary>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.Register(RoadShowHardCode.Models.User,System.String,System.String[])">
+            <summary>
+            The register.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GetUserProfile(System.String)">
+            <summary>
+            The get user profile.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GetUserProfile(Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The get user profile.
+            </summary>
+            <param name="userLoginInfo">
+            The user login info.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GetUserProfile(System.String,System.String)">
+            <summary>
+            The get user profile.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.RemoveLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The remove login.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="userLoginInfo">
+            The user login info.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.CreateIdentity(RoadShowHardCode.Models.User,System.String)">
+            <summary>
+            The create identity.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="applicationCookie">
+            The application cookie.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.AddLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The add login.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.ChangePasswordAsync(System.String,System.String,System.String)">
+            <summary>
+            The change password.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="oldPassword">
+            The old password.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.ChangePassword(System.String,System.String)">
+            <summary>
+            The change password.
+            </summary>
+            <param name="userLogin">
+            The user login.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.AddPasswordAsync(System.String,System.String)">
+            <summary>
+            The add password.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GetLogins(System.String)">
+            <summary>
+            The get logins.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.UpdateUser(RoadShowHardCode.Models.User)">
+            <summary>
+            The update user.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.UpdateReLoginRequired(RoadShowHardCode.Models.User)">
+            <summary>
+            The update re login required.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see>
+                <cref>ServiceResult</cref>
+            </see>
+            .
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.AddUserToRoles(System.String,System.String[])">
+            <summary>
+            The add user to roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.RemoveUserFromRoles(System.String,System.String[])">
+            <summary>
+            The remove user from roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.RemoveProfile(System.String)">
+            <summary>
+            The remove profile.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GetRoles">
+            <summary>
+            The get roles.
+            </summary>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GetUsers">
+            <summary>
+            The get users.
+            </summary>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GetUserRoles(System.String)">
+            <summary>
+            The get user roles.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.GeneratePassword">
+            <summary>
+            The generate password.
+            </summary>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.UpdatePassword(System.String,System.String)">
+            <summary>
+            The update password.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityService.IsInRoleAsync(System.String,System.String)">
+            <summary>
+            The is in role async.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="role">
+            The role.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.IIdentityStorage">
+            <summary>
+            The IdentityStorage interface.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.IIdentityStorage.UserManager">
+            <summary>
+            Gets the user manager.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetUser(System.String)">
+            <summary>
+            The get user.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetUser(System.String,System.String)">
+            <summary>
+            The get user.
+            </summary>
+            <param name="email">
+            The email.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.CreateIdentity(RoadShowHardCode.Models.User,System.String)">
+            <summary>
+            The create identity.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="type">
+            The type.
+            </param>
+            <returns>
+            The <see cref="T:System.Security.Claims.ClaimsIdentity"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.CreateUser(RoadShowHardCode.Models.User,System.String,System.String[])">
+            <summary>
+            The create user.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="password">
+            The password.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.AddUserToRoles(System.String,System.String[])">
+            <summary>
+            The add user to roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.RemoveUserFromRoles(System.String,System.String[])">
+            <summary>
+            The remove user from roles.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="roles">
+            The roles.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.Update(RoadShowHardCode.Models.User)">
+            <summary>
+            The update.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.UpdateReLoginRequired(RoadShowHardCode.Models.User)">
+            <summary>
+            The update re login required.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetUserById(System.String)">
+            <summary>
+            The get user by id.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetUser(Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The get user.
+            </summary>
+            <param name="userLoginInfo">
+            The user login info.
+            </param>
+            <returns>
+            The <see cref="T:RoadShowHardCode.Models.User"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.RemoveLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The remove login.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="loginInfo">
+            The login info.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.AddLogin(System.String,Microsoft.AspNet.Identity.UserLoginInfo)">
+            <summary>
+            The add login.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <param name="login">
+            The login.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.AddPasswordAsync(System.String,System.String)">
+            <summary>
+            The add password.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetLogins(System.String)">
+            <summary>
+            The get logins.
+            </summary>
+            <param name="getUserId">
+            The get user id.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.ChangePasswordAsync(System.String,System.String,System.String)">
+            <summary>
+            The change password.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="oldPassword">
+            The old password.
+            </param>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GeneratePassword">
+            <summary>
+            The generate password.
+            </summary>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.IsInRoleAsync(System.String,System.String)">
+            <summary>
+            The is in role async.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="role">
+            The role.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task`1"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetRoles">
+            <summary>
+            The get roles.
+            </summary>
+            <returns>
+            The <see cref="T:System.Collections.Generic.Dictionary`2"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetUsers">
+            <summary>
+            The get users.
+            </summary>
+            <returns>
+            The <see cref="T:System.Collections.Generic.Dictionary`2"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.IIdentityStorage.GetUserRoles(System.String)">
+            <summary>
+            The get user roles.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IList`1"/>.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.LoginInfo">
+            <summary>
+            The login info.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.LoginInfo.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.LoginInfo.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.LoginInfo.AuthenticationType">
+            <summary>
+            Gets or sets the authentication type.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.LoginInfo.SecureDataFormat">
+            <summary>
+            Gets or sets the secure data format.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.LoginInfo.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.LoginResponse">
+            <summary>
+            The login response.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.LoginResponse.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.LoginResponse.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.SecurityHelper">
+            <summary>
+            The security helper.
+            </summary>
+        </member>
+        <member name="F:RoadShowHardCode.Api.Identity.SecurityHelper.userManager">
+            <summary>
+            The user manager.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.SecurityHelper.#ctor(Microsoft.AspNet.Identity.UserManager{RoadShowHardCode.Models.User})">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.SecurityHelper"/> class.
+            </summary>
+            <param name="userManager">
+            The user manager.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.SecurityHelper.GenerateAccessToken(System.Security.Claims.ClaimsIdentity,Microsoft.Owin.Security.ISecureDataFormat{Microsoft.Owin.Security.AuthenticationTicket},System.Int32)">
+            <summary>
+            The generate access token.
+            </summary>
+            <param name="identity">
+            The identity.
+            </param>
+            <param name="formatter">
+            The formatter.
+            </param>
+            <param name="expirationHours">
+            The expiration Hours.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.SecurityHelper.GenerateRandomToken">
+            <summary>
+            The generate random token.
+            </summary>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.SecurityHelper.HashPassword(System.String)">
+            <summary>
+            The hash password.
+            </summary>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.SecurityHelper.ValidatePasswordAsync(System.String)">
+            <summary>
+            The validate password async.
+            </summary>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.SecurityHelper.ValidatePassword(System.String)">
+            <summary>
+            The validate password.
+            </summary>
+            <param name="newPassword">
+            The new password.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/>.
+            </returns>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Identity.ServiceResult`1">
+            <summary>
+            The service result.
+            </summary>
+            <typeparam name="T">
+            Any type
+            </typeparam>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.ServiceResult`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/> class.
+            </summary>
+            <param name="data">
+            The data.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.ServiceResult`1.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/> class.
+            </summary>
+            <param name="code">
+            The code.
+            </param>
+            <param name="message">
+            The message.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.ServiceResult`1.#ctor(System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/> class.
+            </summary>
+            <param name="code">
+            The code.
+            </param>
+            <param name="messages">
+            The messages.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Identity.ServiceResult`1.#ctor(RoadShowHardCode.BusinessLayer.IError)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Identity.ServiceResult`1"/> class.
+            </summary>
+            <param name="error">
+            The error.
+            </param>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.ServiceResult`1.Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.ServiceResult`1.Succeeded">
+            <summary>
+            Gets a value indicating whether succeeded.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.ServiceResult`1.ErrorCode">
+            <summary>
+            Gets the error code.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Identity.ServiceResult`1.Errors">
+            <summary>
+            Gets the errors.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Models.AccessTokenDto">
+            <summary>
+            The access token data transfer object.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.AccessTokenDto.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Models.LoginDto">
+            <summary>
+            Data transfer object used to authenticate user
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.LoginDto.Email">
+            <summary>
+            Gets or sets user name
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.LoginDto.Password">
+            <summary>
+            Gets or sets password
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Models.RegisterDto">
+            <summary>
+            The register data transfer object.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.ConfirmPassword">
+            <summary>
+            Gets or sets the confirm password.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.FirstLevel">
+            <summary>
+            Gets or sets the first level.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RegisterDto.SecondLevel">
+            <summary>
+            Gets or sets the second level.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Models.RoleDto">
+            <summary>
+            Data transfer object for user role
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Models.RoleDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Models.RoleDto"/> class.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Models.RoleDto.#ctor(Microsoft.AspNet.Identity.EntityFramework.IdentityRole)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Models.RoleDto"/> class.
+            </summary>
+            <param name="role">
+            The role.
+            </param>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RoleDto.RoleId">
+            <summary>
+            Gets or sets Role id.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.RoleDto.RoleName">
+            <summary>
+            Gets or sets Role name.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.Models.UserInfoDto">
+            <summary>
+            Information about user
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Models.UserInfoDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Models.UserInfoDto"/> class.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.Models.UserInfoDto.#ctor(RoadShowHardCode.Models.User,System.Collections.Generic.List{Microsoft.AspNet.Identity.EntityFramework.IdentityRole})">
+            <summary>
+            Initializes a new instance of the <see cref="T:RoadShowHardCode.Api.Models.UserInfoDto"/> class.
+            </summary>
+            <param name="user">
+            The user.
+            </param>
+            <param name="userRoles">
+            The user roles.
+            </param>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.UserInfoDto.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.UserInfoDto.UserName">
+            <summary>
+            Gets or sets the user name.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.UserInfoDto.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.UserInfoDto.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.UserInfoDto.Birthday">
+            <summary>
+            Gets or sets the birthday.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.UserInfoDto.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:RoadShowHardCode.Api.Models.UserInfoDto.Roles">
+            <summary>
+            Gets or sets the roles.
+            </summary>
+        </member>
+        <member name="T:RoadShowHardCode.Api.ReadEntityBodyModeWorkaroundModule">
+            <summary>
+            The read entity body mode workaround module.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.ReadEntityBodyModeWorkaroundModule.Dispose">
+            <summary>
+            The dispose.
+            </summary>
+        </member>
+        <member name="M:RoadShowHardCode.Api.ReadEntityBodyModeWorkaroundModule.Init(System.Web.HttpApplication)">
+            <summary>
+            The initialization.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+        </member>
+        <member name="M:RoadShowHardCode.Api.ReadEntityBodyModeWorkaroundModule.context_BeginRequest(System.Object,System.EventArgs)">
+            <summary>
+            The context_ begin request.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="T:Arvi.Omt.Api.Handler.ApiLogEntity">
+            <summary>
+            Api Log Entity
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.Id">
+            <summary>
+            The (database) ID for the API log entry.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.Application">
+            <summary>
+            The application that made the request.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.User">
+            <summary>
+            The user that made the request.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.Machine">
+            <summary>
+            The machine that made the request.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestIpAddress">
+            <summary>
+            The IP address that made the request.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestContentType">
+            <summary>
+            The request content type.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestContentBody">
+            <summary>
+            The request content body.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestUri">
+            <summary>
+            The request URI.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestMethod">
+            <summary>
+            The request method (GET, POST, etc).
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestRouteTemplate">
+            <summary>
+            The request route template.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestRouteData">
+            <summary>
+            The request route data.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestHeaders">
+            <summary>
+            The request headers.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.RequestTimestamp">
+            <summary>
+            The request timestamp.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.ResponseContentType">
+            <summary>
+            The response content type.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.ResponseContentBody">
+            <summary>
+            The response content body.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.ResponseStatusCode">
+            <summary>
+            The response status code.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.ResponseHeaders">
+            <summary>
+            The response headers.
+            </summary>
+        </member>
+        <member name="P:Arvi.Omt.Api.Handler.ApiLogEntity.ResponseTimestamp">
+            <summary>
+            The response timestamp.
+            </summary>
+        </member>
+        <member name="T:Arvi.Omt.Api.Handler.Extension">
+            <summary>
+            The extension.
+            </summary>
+        </member>
+        <member name="M:Arvi.Omt.Api.Handler.Extension.ToPairs(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            The to pairs.
+            </summary>
+            <param name="collection">
+            The collection.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            </exception>
+        </member>
+        <member name="T:Arvi.Omt.Api.Handler.MessageLoggingHandler">
+            <summary>
+            The message logging handler.
+            </summary>
+        </member>
+        <member name="F:Arvi.Omt.Api.Handler.MessageLoggingHandler.LogRow">
+            <summary>
+            The log row.
+            </summary>
+        </member>
+        <member name="F:Arvi.Omt.Api.Handler.MessageLoggingHandler.logger">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="M:Arvi.Omt.Api.Handler.MessageLoggingHandler.#ctor(Common.Logging.ILog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Arvi.Omt.Api.Handler.MessageLoggingHandler"/> class.
+            </summary>
+            <param name="logger">
+            The logger.
+            </param>
+        </member>
+        <member name="M:Arvi.Omt.Api.Handler.MessageLoggingHandler.IncomingMessageAsync(System.String,System.String,System.Byte[])">
+            <summary>
+            The incoming message async.
+            </summary>
+            <param name="correlationId">
+            The correlation id.
+            </param>
+            <param name="requestInfo">
+            The request info.
+            </param>
+            <param name="message">
+            The message.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Arvi.Omt.Api.Handler.MessageLoggingHandler.OutgoingMessageAsync(System.String,System.String,System.Byte[])">
+            <summary>
+            The outgoing message async.
+            </summary>
+            <param name="correlationId">
+            The correlation id.
+            </param>
+            <param name="requestInfo">
+            The request info.
+            </param>
+            <param name="message">
+            The message.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Arvi.Omt.Api.Handler.MessageLoggingHandler.MessageAsync(Arvi.Omt.Api.Handler.ApiLogEntity,System.String)">
+            <summary>
+            The full message async.
+            </summary>
+            <param name="apiLogEntity">
+            The ApiLogEntity info.
+            </param>
+            <param name="requestInfo">
+            The request info.
+            </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
