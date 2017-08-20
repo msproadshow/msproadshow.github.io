@@ -95,6 +95,10 @@ namespace RoadShowHardCode.Data.Migrations
                     FirstLevel = c.String(),
                     SecondLevel = c.String(),
                     PlainPassword = c.String(),
+                    UserName = c.String(nullable: false, maxLength: 256),
+                    PasswordResetToken = c.String(),
+                    FirstName = c.String(),
+                    LastName = c.String(),
                     Email = c.String(maxLength: 256),
                     EmailConfirmed = c.Boolean(nullable: false),
                     PasswordHash = c.String(),
@@ -105,7 +109,6 @@ namespace RoadShowHardCode.Data.Migrations
                     LockoutEndDateUtc = c.DateTime(),
                     LockoutEnabled = c.Boolean(nullable: false),
                     AccessFailedCount = c.Int(nullable: false),
-                    UserName = c.String(nullable: false, maxLength: 256),
                 })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.UserName, unique: true, name: "UserNameIndex");
