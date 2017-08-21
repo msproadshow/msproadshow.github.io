@@ -841,6 +841,12 @@ footer{
 
 8. Coustom Media Query */ 
 
+@media (max-width: 768px) {
+	.navbar-brand img{
+	  	height: 100%;
+	}
+}
+
 @media only screen and (max-width: 800px) {
     
     .styled > div{
