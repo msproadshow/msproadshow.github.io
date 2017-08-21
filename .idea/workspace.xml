@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8661d59-524e-47d6-aa79-d7c6c43084fc" name="Default" comment="">
+    <list default="true" id="b8661d59-524e-47d6-aa79-d7c6c43084fc" name="Default" comment="City buttons positioning is fixed&#10;Link to gallerific-2.0 is fixed">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/layout.css" afterPath="$PROJECT_DIR$/css/layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+            <state relative-caret-position="549">
+              <caret line="1535" column="63" lean-forward="true" selection-start-line="1535" selection-start-column="63" selection-end-line="1535" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -59,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="966" column="1" lean-forward="false" selection-start-line="966" selection-start-column="1" selection-end-line="966" selection-end-column="1" />
+            <state relative-caret-position="226">
+              <caret line="934" column="19" lean-forward="true" selection-start-line="934" selection-start-column="19" selection-end-line="934" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -115,11 +113,11 @@
         <option value="$PROJECT_DIR$/css/font.css" />
         <option value="$PROJECT_DIR$/shedule/index.html" />
         <option value="$PROJECT_DIR$/shedule/styles.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/layout.css" />
         <option value="$PROJECT_DIR$/registrationForm/registrationForm.html" />
         <option value="$PROJECT_DIR$/registrationForm/index.js" />
         <option value="$PROJECT_DIR$/registrationForm/styles.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/layout.css" />
       </list>
     </option>
   </component>
@@ -753,12 +751,20 @@
       <workItem from="1502871866466" duration="5662000" />
       <workItem from="1502878412480" duration="191000" />
       <workItem from="1502878897084" duration="25714000" />
-      <workItem from="1503332921605" duration="156000" />
+      <workItem from="1503332921605" duration="652000" />
     </task>
+    <task id="LOCAL-00001" summary="City buttons positioning is fixed&#10;Link to gallerific-2.0 is fixed">
+      <created>1503333107852</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1503333107852</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47999000" />
+    <option name="totallyTimeSpent" value="48495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -835,6 +841,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="City buttons positioning is fixed&#10;Link to gallerific-2.0 is fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="City buttons positioning is fixed&#10;Link to gallerific-2.0 is fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1273,18 +1283,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="966" column="1" lean-forward="false" selection-start-line="966" selection-start-column="1" selection-end-line="966" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+        <state relative-caret-position="549">
+          <caret line="1535" column="63" lean-forward="true" selection-start-line="1535" selection-start-column="63" selection-end-line="1535" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1300,6 +1302,14 @@
             <element signature="n#style#0;n#section#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="934" column="19" lean-forward="true" selection-start-line="934" selection-start-column="19" selection-end-line="934" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
