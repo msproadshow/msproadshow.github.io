@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8661d59-524e-47d6-aa79-d7c6c43084fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registrationForm/index.js" afterPath="$PROJECT_DIR$/registrationForm/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registrationForm/registrationForm.html" afterPath="$PROJECT_DIR$/registrationForm/registrationForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registrationForm/styles.css" afterPath="$PROJECT_DIR$/registrationForm/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +15,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="registrationForm.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="registrationForm.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/registrationForm/registrationForm.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="317">
@@ -27,25 +25,45 @@
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/registrationForm/styles.css">
+          <file leaf-file-name="success.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/registrationForm/success.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="503">
-                  <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+                <state relative-caret-position="231">
+                  <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/registrationForm/index.js">
+          <file leaf-file-name="success.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/registrationForm/success.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="492">
-                  <caret line="145" column="4" lean-forward="false" selection-start-line="145" selection-start-column="2" selection-end-line="145" selection-end-column="62" />
+                <state relative-caret-position="315">
+                  <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="failed.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/registrationForm/failed.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="231">
+                  <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="fail.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/registrationForm/fail.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -58,9 +76,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -94,6 +112,10 @@
         <option value="$PROJECT_DIR$/registrationForm/styles.css" />
         <option value="$PROJECT_DIR$/registrationForm/index.js" />
         <option value="$PROJECT_DIR$/registrationForm/registrationForm.html" />
+        <option value="$PROJECT_DIR$/registrationForm/success.css" />
+        <option value="$PROJECT_DIR$/registrationForm/failed.html" />
+        <option value="$PROJECT_DIR$/registrationForm/fail.css" />
+        <option value="$PROJECT_DIR$/registrationForm/success.html" />
       </list>
     </option>
   </component>
@@ -117,7 +139,7 @@
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -131,24 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="msproadshow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msproadshow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="msproadshow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msproadshow" type="462c0819:PsiDirectoryNode" />
-              <item name="registrationForm" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -713,12 +717,13 @@
       <workItem from="1502878412480" duration="191000" />
       <workItem from="1502878897084" duration="25714000" />
       <workItem from="1503332921605" duration="156000" />
-      <workItem from="1503422251326" duration="1302000" />
+      <workItem from="1503422251326" duration="1841000" />
+      <workItem from="1503425637333" duration="3091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49301000" />
+    <option name="totallyTimeSpent" value="52931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1488" height="879" extended-state="6" />
@@ -801,35 +806,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shedule/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/color.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/font.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1238,14 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registrationForm/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registrationForm/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -1254,10 +1222,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/registrationForm/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/registrationForm/registrationForm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="63" column="48" lean-forward="false" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrationForm/success.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrationForm/failed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrationForm/fail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrationForm/success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
