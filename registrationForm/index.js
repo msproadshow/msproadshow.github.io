@@ -137,4 +137,11 @@ function run() {
     };
 
 };
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log('register');
+    };
+
+    var registerButton = document.getElementById("registerButton");
+  /*  registerButton.addEventListener('click',handleSubmit);*/
 }
