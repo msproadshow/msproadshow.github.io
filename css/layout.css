@@ -953,6 +953,7 @@ footer{
 	flex-direction: row;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	padding-bottom: 2%;
 }
 
 #buttons{
