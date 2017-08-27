@@ -216,6 +216,7 @@ function initMap() {
 
     }
     AddControlToMap('Київ', kyiv, map);
+    AddControlToMap('Дніпро', dnipro, map);
     AddControlToMap('Львів', lviv, map);
     AddControlToMap('Вінниця', vinnitsa, map);
     AddControlToMap('Одеса', odesa, map);
