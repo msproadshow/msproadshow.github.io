@@ -94,7 +94,7 @@ Point : One Page Event and Conference HTML Template
 }
 
 .site_title {
-    padding: 3%;
+    padding: 30px;
 }
 
 .overlay_home {
@@ -896,6 +896,10 @@ a.advance-link {
     background-color: rgba(127, 169, 210, 0.4);
 }
 
+.contact_action .overlay h3 {
+    font-size: 14px;
+}
+
 .contact_form {
     padding-bottom: 30px;
 }
@@ -978,6 +982,25 @@ footer {
 @media (max-width: 768px) {
     .navbar-brand img {
         height: 100%;
+    }
+
+    .contact_action .overlay {
+        padding: 90px 26px;
+    }
+
+    .contact_action .overlay a {
+        padding: 16px 40px;
+    }
+
+    #home .overlay_home .site_title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact_action .overlay h4 {
+        font-size: 14px;
     }
 }
 
